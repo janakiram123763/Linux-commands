@@ -1,2 +1,0 @@
-# Linux-commands
-linux commands
