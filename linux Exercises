@@ -1,0 +1,86 @@
+1. What is the result of the following code?
+
+#!/bin/bash 
+arr1=(Saturday Sunday Monday Tuesday Wednesday) 
+echo ${arr1[3]} 
+
+Result:
+Tuesday
+
+2. What is the problem with the following code? And how do we fix it?
+
+#!/bin/bash 
+files = 'ls -la' 
+echo $files 
+
+correct code
+
+#!/bin/bash 
+ls -la $files 
+
+3. What is the value of the b and c variables in the following code?
+#!/bin/bash 
+a=15 
+b=20 
+c=$a 
+b=$c
+
+Result:
+15
+15 
+
+
+#!/bin/bash 
+a=15 
+b=20 
+c=a 
+b=c
+
+Result:
+a
+c
+
+
+
+4. If we have the following code:
+
+#!/bin/bash
+echo $1
+echo $2
+echo $3
+And we run the script with these options:
+$ ./script1.sh -a -b50 -c
+
+What is the result of running this code?
+a
+b50
+c
+
+
+
+5. What is the result of the following code?
+#!/bin/bash 
+mydir=/home/mydir 
+name="mokhtar" 
+if [ -d $mydir ] || [ -n $name ]; then 
+   echo "True" 
+else 
+echo "False" 
+fi 
+
+Result:
+True
+
+
+6. What is the problem with the following code?
+#!/bin/bash
+a=(( 8 + 4 ))
+echo $a
+
+Correct code:
+
+#!/bin/bash
+declare -i a
+a=8+4
+echo $a
+
